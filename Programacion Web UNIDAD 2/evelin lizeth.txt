@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-compatible" content="IE=edge">
+    <meta name=" viewport" content="width=device-width, initial-sacel=1.0">
+    <link rel="stylesheet" href="Stilos1.css">
+    <title>Bienvenido a la entrevista!</title>
+</head>
+
+<body>
+    <div class=" container">
+        <div class="title">Bienvenido a la entrevista!</div>
+
+        <form id="form-validation" mpvalidate>
+            <div class="form-group">
+                <span>NOMBRE:*</span>
+                <input type="text" placeholder="Ingresar Nombre" required>
+                <small>Obligatorio Registro de Nombre</small>
+            </div>
+
+            <div class="form-group">
+                <span>APELLIDO PATERNO:*</span>
+                <input type="text" placeholder="Ingresar Apellido" required>
+                <small>Obligatorio Registro de Apellido</small>
+            </div>
+
+            <div class="form-group">
+                <span>APELLIDO MATERNO:* </span>
+                <input type="text" placeholder="Ingresar Apellido" required>
+                <small>Obligatorio Registro de Apellido</small>
+            </div>
+
+            <div class="form-group">
+                <span>CORREO ELCTRONICO:* </span>
+                <input type="email" placeholder="Email" required>
+                <small>Obligatorio Registro de Email</small>
+            </div>
+
+            <div class="form-group">
+                <span>TELEFONO:* </span>
+                <input type="tel" placeholder="+52 9531875545" required>
+                <small>Obligatorio Registro de Telefono</small>
+            </div>
+
+
+            <div class="form-group">
+                <label>¿TIENE ALGUNA DISCAPACIDAD?:* </label><br>
+                <input type="radio" id="discapacidad_si" name="discapacidad" value="si" required>
+                <label for="discapacidad_si">Sí</label><br>
+                <input type="radio" id="discapacidad_no" name="discapacidad" value="no">
+                <label for="discapacidad_no">No</label>
+            </div>
+
+
+
+            <div class="form-group">
+                <span>TIPO DE ENTREVISTA (sugerida):* </span>
+                
+                <select>
+                    <option> Selecionar</option>
+                    <option>Virtual</option>
+                    <option>Presencial</option>
+                    <small>Seleccion obligatoria </small>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <span>KARDEX:* </span>
+                <input type="file" placeholder="Selecionar archivo" required>
+                <small>SELECCION OBLIGATORIA</small>
+            </div>
+
+
+            <div class="form-group">
+                <span>CURRICULUM VITAE:* </span>
+                <input type="file" placeholder="Selecionar archivo" required>
+                <small>SELECCION OBLIGATORIA</small>
+            </div>
+
+            <div class="form-group">
+                <label for="comentario">OBSERVACIONES:* </label>
+                <textarea cols="50" id="comentario" placeholder="Ingresar las observaciones" name="comentario"
+                    maxlength="50" required></textarea>
+                <small id="charCount">50 caracteres restantes</small>
+            </div>
+
+            <script>
+                document.getElementById('comentario').addEventListener('input', function () {
+                    var maxLength = this.maxLength;
+                    var currentLength = this.value.length;
+                    var remaining = maxLength - currentLength;
+                    document.getElementById('charCount').textContent = remaining + ' caracteres restantes';
+                });
+            </script>
+
+<div class="button">
+    <input type="submit" value="Guardar"  required>
+    
+    <script>
+        const addForm = document.getElementById
+            ("form-validation");
+        addForm.addEventListener("submit", (e) => {
+            if (addForm.checkValidity() ===false) {
+                e.preventDefault();
+                e.stopPropagation();
+                addform.classList.add('was-validated');
+                return false
+            }
+        });
+    </script>
+</div>
+
+stilo
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+small{ 
+    display: none;
+}
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: linear-gradient(130deg, lightblue, darkblue); /* Ajustar colores si es necesario */
+}
+
+.container {
+    max-width: 900px; /* Ajustado para acomodar tres columnas */
+    width: 100%;
+    padding: 25px 30px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.container .title {
+    text-align: center; /* Centra el título */
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.container form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 10px 12px 0;
+}
+
+form .form-group {
+    margin-bottom: 20px;
+    width: calc(100% / 3 - 20px); /* Ajustado para tres columnas */
+}
+
+form span {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    height: 40px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group input:valid {
+    border-color: beige;
+}
+
+/* Estilos para los botones de radio */
+.form-group input[type="radio"] {
+    width: 15px;  /* Ajusta el tamaño del botón de radio */
+    height: 15px; /* Ajusta el tamaño del botón de radio */
+    transform: scale(0.8); /* Escala el tamaño del botón de radio */
+    margin-right: 5px; /* Espacio entre el botón y el texto */
+}
+
+form .button {
+    width: 100%;
+    height: 40px;
+    margin: 40px 0;
+    display: flex; /* Muestra el botón */
+    justify-content: center; /* Centra el botón */
+}
+
+form .button input {
+    width: 100%; /* Ajusta el ancho del botón */
+    height: 100%;
+    outline: none;
+    cursor: pointer;
+    background: linear-gradient(130deg, black);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    padding: 0 20px; /* Agrega un poco de relleno a los lados */
+}
+
+form .button input:hover {
+    background: linear-gradient(130deg, black, blue);
+}
+
+.was-validate small {
+    display: block;
+    color: red;
+}
+
+@media(max-width: 800px) {
+    .container {
+        max-width: 100%;
+    }
+
+    form .form-group {
+        margin-bottom: 15px;
+        width: calc(100% / 3 - 20px); /* Ajuste para dos columnas en pantallas más pequeñas */
+    }
+
+    .container form {
+        max-height: 400px;
+        overflow-y: scroll;
+    }
+
+    .container form::-webkit-scrollbar {
+        width: 100;
+    }
+
+    form .button {
+        margin: 20px;
+    }
+}
+
+@media(max-width: 584px) {
+    form .form-group {
+        width: 100%; /* Ajuste para una columna en pantallas muy pequeñas */
+    }
+}

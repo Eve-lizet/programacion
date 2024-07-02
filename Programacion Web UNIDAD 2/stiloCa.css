@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(black, whitesmoke,black);
+}
+
+.calendario-container {
+    width: 90%;
+    max-width: 1000px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(58, 52, 52, 0.1);
+    text-align: center;
+    background-color: whitesmoke;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.calendario {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.calendario th,
+.calendario td {
+
+    padding: 10px;
+    vertical-align: top;
+}
+
+
+.mes {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+
+.mes th,
+.mes td {
+
+    padding: 5px;
+    text-align: center;
+}
+
+
+
+
+.mes-container {
+    display: flex;
+    justify-content: #8fd1dd;
+    flex-wrap: wrap;
+}
+
+.mes-container .mes-wrapper {
+    width: 23%;
+    margin-bottom: 20px;
+}
