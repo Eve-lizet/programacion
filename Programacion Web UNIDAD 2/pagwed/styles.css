@@ -1,0 +1,250 @@
+/* Resetear márgenes */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* Estilo del body */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: url('IMG/fondo\ \(1\).jpg') no-repeat center center fixed;
+    background-size: cover; /* Esta propiedad hace que la imagen cubra toda la pantalla */
+    color: black;
+}
+
+/* Estilo del banner */
+#banner {margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(#000d38, rgb(5, 5, 114), grey, white);
+    padding: 20px;
+    color: white;
+}
+
+#banner img {
+    width: 12%;
+}
+
+#banner h1 {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 25px;
+}
+
+/* Estilo del menú */
+.menu {
+    list-style: none;
+    padding: 0;
+    background: #112056;
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+}
+.titulo-ga {
+    text-align: center;
+    color: white;
+}
+
+.menu li {
+    display: inline-block;
+    text-align: center;
+    position: relative;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 20px;
+    display: block;
+}
+
+.menu li a:hover {
+    color: #673e5e;
+    transition: all 0.3s;
+}
+
+/* Submenu */
+.submenu {
+    position: absolute;
+    background: #92868f;
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1.5s;
+}
+
+.submenu li a {
+    display: block;
+    padding: 9px;
+    color: #030303;
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+}
+
+.menu li:hover .submenu {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Estilo del contenedor */
+#contenedor {
+    width: 1000px;
+    height: 900px;
+    margin: 10px auto 20px auto;
+    background: rgb(0, 0, 0,0.5);
+}
+
+/* Estilo del contenido */
+#contenido {
+    width: 740px;
+    height: 600px;
+    float: left;
+    background: linear-gradient(white, grey, white);
+    margin: 10px;
+    margin-right: 10px;
+}
+
+/* Estilo del aside */
+aside {
+    width: 160px;
+    height: 600px;
+    background: #112056;
+    margin-top: 10px;
+    float: right;
+}
+
+/* Estilo del footer */
+footer {
+    margin: 1px;
+    background: #112056;
+    clear: both;
+}
+
+footer h2 {
+    font-size: 10px;
+    text-align: center;
+    padding: 10px;
+    font-style: italic;
+}
+
+/* Estilo del enlace en el pie de página */
+footer h2 a {
+    color: white; /* Color del texto del enlace */
+    text-decoration: none; /* Sin subrayado */
+}
+
+footer h2 a:hover {
+    text-decoration: underline; /* Subrayado al pasar el ratón por encima */
+}
+
+/* Estilo para la imagen y el texto del integrante */
+#integrante-viewer {
+    text-align: center;
+    margin: 20px auto;
+}
+
+#integrante-image {
+    max-width: 100%;
+    max-height: 150px;
+    display: block;
+    margin: 20px auto;
+}
+
+#integrante-texto {
+    font-size: 18px;
+    margin-top: 10px;
+    color: white; /* Color del texto del integrante */
+    text-align: center; /* Alinear el texto al centro */
+}
+#integrante-info {
+    font-size: 16px;
+    margin-top: 10px;
+    color: white;
+    text-align: left;
+    max-width: 100%;
+    overflow-wrap: break-word;
+}
+/* styles.css */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    padding: 10px;
+}
+
+.grid-container figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.grid-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.grid-container figcaption {
+    text-align: center;
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* Animación para traslación */
+@keyframes traslacion {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    50% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+#progreso-container {
+    display: flex;
+    justify-content: center;
+    /* Centra horizontalmente */
+    align-items: center;
+    /* Centra verticalmente */
+    height: 400px;
+    /* Ajusta según el tamaño necesario */
+    overflow: hidden;
+    /* Para ocultar el texto que se sale del contenedor */
+    position: relative;
+    /* Necesario para la traslación del texto */
+    flex-direction: column;
+    /* Asegura que los elementos se apilen verticalmente */
+    height: 50vh;
+    /* Ajusta según el tamaño necesario */
+
+}
+
+#progreso {
+    display: inline-block;
+    font-size: 24px;
+    /* Ajusta el tamaño de la fuente según necesites */
+    color: #ebe2e2;
+    /* Color del texto, puedes cambiarlo */
+    white-space: nowrap;
+    /* Para evitar que el texto se divida en varias líneas */
+    position: absolute;
+    /* Posición absoluta para animar */
+    animation: traslacion 10s linear infinite;
+    /* Aumenta el tiempo de animación para una traslación más suave */
+}
+
+
+#imagen-container img {
+    width: 300px; /* Ajusta el ancho según tus necesidades */
+    height: auto; /* Mantiene la proporción de la imagen */
+    max-width: 100%; /* Asegura que la imagen no se desborde del contenedor */
+}

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Estructura básica</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript">
+                function setup() {
+            // Configurar aquí cualquier inicialización necesaria al cargar la página
+        }
+
+        function showTecInfo() {
+            // Mostrar información específica al hacer clic en la imagen del Tec
+            var img = document.getElementById("galleryImage");
+            var canvas = document.getElementById("micanvas");
+
+            // Configura la imagen y el texto específico para mostrar
+            img.src = "Tec.png"; // Cambia la ruta según sea necesario
+            img.style.display = "block";
+            canvas.style.display = "none";
+
+            // Oculta otras secciones si es necesario
+            document.getElementById("infoIngCivil").style.display = "none";
+            document.getElementById("infoAdmin").style.display = "none";
+            document.getElementById("infoIndustrial").style.display = "none";
+            document.getElementById("infoGestion").style.display = "none";
+            document.getElementById("infoSistemas").style.display = "none";
+            document.getElementById("infoMecatronica").style.display = "none";
+            document.getElementById("infoArquitectura").style.display = "none";
+        }
+
+        function goBackToCanvas() {
+            // Función para regresar al canvas principal
+            var img = document.getElementById("galleryImage");
+            var canvas = document.getElementById("micanvas");
+
+            img.style.display = "none";
+            canvas.style.display = "block";
+
+            // Limpiar detalles de ofertas educativas si es necesario
+            document.getElementById("infoIngCivil").style.display = "none";
+            document.getElementById("infoAdmin").style.display = "none";
+            document.getElementById("infoIndustrial").style.display = "none";
+            document.getElementById("infoGestion").style.display = "none";
+            document.getElementById("infoSistemas").style.display = "none";
+            document.getElementById("infoMecatronica").style.display = "none";
+            document.getElementById("infoArquitectura").style.display = "none";
+        }
+    </script>
+</head>    
+<body onload="setup();">
+    <div id="contenedor">
+        <header>
+            <div id="banner">  
+                <img src="IMG/logo.png" width="12%" onclick="showTecInfo()">
+                <h1>INSTITUTO TECNOLÓGICO DE TLAXIACO</h1>
+                <img src="IMG/yakuin.gif" width="300px"> 
+            </div>
+        </header>
+        <nav>
+            <ul class="menu">
+                <li><a href="#" onclick="goBackToCanvas()">INICIO</a>
+                    
+                <li><a href="#">OFERTAS EDUCATIVAS</a>
+                    <ul class="submenu">
+                        <li><a href="#" id="Ing.Civil" onclick="showInfoIngCivil()">Ing. Civil</a></li>  
+                        <li><a href="#" id="Licenciatura en Administracion" onclick="showInfoAdmin()">Licenciatura en Administración</a></li> 
+                        <li><a href="#" id="Ing.Industrial" onclick="showInfoIndustrial()">Ing. Industrial</a></li>  
+                        <li><a href="#" id="Ing.en Gestion Empresarial" onclick="showInfoGestion()">Ing. en Gestión Empresarial</a></li>  
+                        <li><a href="#" id="Ing.en Sistemas Computacionales" onclick="showInfoSistemas()">Ing. en Sistemas Computacionales</a></li>
+                        <li><a href="#" id="Ing.Mecatronica" onclick="showInfoMecatronica()">Ing. Mecatrónica</a></li>
+                        <li><a href="#" id="Licenciatura en Arquitectura" onclick="showInfoArquitectura()">Licenciatura en Arquitectura</a></li>   
+                    </ul>
+                </li>
+                <li><a href="#">SISTEMAS</a>
+                    <ul class="submenu">
+                        <li><a href="pag2.html" id="PROGRAMACION WED">PROGRAMACION WED</a></li>  
+                    </ul>
+                </li>
+                <li><a href="#">GALERÍA</a>
+                    <ul class="submenu">
+                        <li><a href="EVENTOS IMPORTANTES.HTML" id="tecnologico">EVENTOS IMPORTANTES </a></li>  
+                        <li><a href="TITULACION.HTML" id="tecnologico">TITULACION</a></li>  
+                        <li><a href="FESTIVIDADES.HTML" id="tecnologico">FESTIVIDADES</a></li>  
+                        <li><a href="EVENTOS NACIONALES.HTML" id="tecnologico">EVENTOS NACIONALES</a></li>   
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <section id="contenido">
+            <canvas id="micanvas" width="600" height="600" style="margin: 100px;">
+                Si estás viendo esto, tu navegador no es compatible con canvas
+            </canvas>
+            <img id="galleryImage" style="display: none; margin: 100px;">
+            <div id="infoTec" style="display: none;">
+                <img src="IMG/Tec.png" alt="Tec" style="width: 100%;">
+                <p>Información sobre el Instituto Tecnológico de Tlaxiaco.</p>
+                <button onclick="goBackToCanvas()">Regresar</button>
+            </div>
+            <div id="infoIngCivil" style="display: none;">
+                <img src="IMG/ing.civil.tec.jpg" alt="Ing. Civil" style="width: 100%;">
+                <p>La ingeniería civil es una amplia disciplina que se encarga del diseño, construcción y mantenimiento de infraestructuras que son esenciales para el funcionamiento de la sociedad moderna. La ingeniería civil es una carrera desafiante y gratificante que ofrece la oportunidad de tener un impacto positivo en el mundo. Los ingenieros civiles juegan un papel crucial en la creación de infraestructuras que son esenciales para el funcionamiento de la sociedad moderna. Si estás interesado en matemáticas, ciencias y tecnología, y te apasiona crear cosas que duren, la ingeniería civil puede ser una buena carrera para ti.</p>
+                <button onclick="goBackToCanvas()">Regresar</button>
+            </div>
+            <div id="infoAdmin" style="display: none;">
+                <img src="IMG/admin.tec.jpg" alt="Licenciatura en Administración" style="width: 100%;">
+                <p>La Licenciatura en Administración es una carrera que te prepara para gestionar y dirigir organizaciones de manera eficiente y eficaz. Abarca una amplia gama de conocimientos y habilidades que te permiten desenvolverte en diferentes áreas funcionales de una empresa, como finanzas, marketing, recursos humanos, producción y operaciones.</p>
+                <button onclick="goBackToCanvas()">Regresar</button>
+            </div>
+            <div id="infoIndustrial" style="display: none;">
+                <img src="IMG/ing.industrial.tec.jpg" alt="Ing. Industrial" style="width: 100%;">
+                <p>La Ingeniería Industrial es una carrera que se enfoca en el diseño, análisis, optimización y gestión de sistemas y procesos productivos en diversos sectores, como manufactura, logística, servicios y salud. Los ingenieros industriales buscan mejorar la eficiencia, la productividad y la calidad en las organizaciones, utilizando herramientas matemáticas, estadísticas, computacionales y de administración.</p>
+                <button onclick="goBackToCanvas()">Regresar</button>
+            </div>
+            <div id="infoGestion" style="display: none;">
+                <img src="ING/ing.gestion.tec.jpg" alt="Ing. en Gestión Empresarial" style="width: 100%;">
+                <p>La Ingeniería en Gestión Empresarial (IGE) es una carrera relativamente nueva que combina los principios de la ingeniería con los fundamentos de la administración de empresas. Esta fusión única permite a los profesionales de esta área abordar los retos empresariales desde una perspectiva analítica, sistemática y orientada a la optimización de procesos y la toma de decisiones estratégicas.</p>
+                <button onclick="goBackToCanvas()">Regresar</button>
+            </div>
+            <div id="infoSistemas" style="display: none;">
+                <img src="ing.sistemas.tec.jpg" alt="Ing. en Sistemas Computacionales" style="width: 100%;">
+                <p>La Ingeniería en Sistemas Computacionales se centra en el diseño, desarrollo, implementación y mantenimiento de sistemas de software y hardware. Los profesionales en esta área tienen un papel crucial en la innovación tecnológica y la optimización de procesos informáticos dentro de diversas organizaciones.</p>
+                <button onclick="goBackToCanvas()">Regresar</button>
+            </div>
+            <div id="infoMecatronica" style="display: none;">
+                <img src="IMG/ing.mecatronica.tec.jpg" alt="Ing. Mecatrónica" style="width: 100%;">
+                <p>La Ingeniería Mecatrónica combina elementos de la ingeniería mecánica, eléctrica, electrónica y de control para diseñar y desarrollar sistemas mecatrónicos. Estos sistemas integran componentes mecánicos, eléctricos y de software, lo que permite crear productos y procesos más eficientes y automatizados.</p>
+                <button onclick="goBackToCanvas()">Regresar</button>
+            </div>
+            <div id="infoArquitectura" style="display: none;">
+                <img src="IMG/arquitectura.tec.jpg" alt="Licenciatura en Arquitectura" style="width: 60%;">
+                <p>La Licenciatura en Arquitectura es una disciplina que combina arte, ciencia y tecnología para diseñar y construir espacios habitables y funcionales. Los arquitectos juegan un papel crucial en la creación de entornos sostenibles y estéticamente agradables que satisfacen las necesidades humanas y mejoran la calidad de vida.</p>
+                <button onclick="goBackToCanvas()">Regresar</button>
+            </div>     
+        </section>
+        <aside>
+            <div id="progreso-container">
+                <h2 id="progreso">TECMN CIENICIA Y TECNOLOGIA, progreso dia con dia </h2>
+            </div>
+            <div id="imagen-container">
+                <h3><img src="IMG/aniversario.jpg" /></h3></div>
+        </aside>
+        <footer>
+            <h2><a href="https://www.youtube.com/watch?v=gzWB9-8_4Ro" target="_blank">Juventud, divino tesoro,
+                ¡ya te vas para no volver!
+                Cuando quiero llorar, no lloro
+                y a veces lloro sin querer
+                    (RUBEN DARIO)
+                </a></h2> </footer>
+    </div>
+    <script>
+        function showImage(imageSrc) {
+            var img = document.getElementById("galleryImage");
+            img.src = imageSrc;
+            img.style.display = "block";
+            var canvas = document.getElementById("micanvas");
+            canvas.style.display = "none";
+            document.getElementById("infoIngCivil").style.display = "none";
+            document.getElementById("infoAdmin").style.display = "none";
+            document.getElementById("infoIndustrial").style.display = "none";
+            document.getElementById("infoGestion").style.display = "none";
+            document.getElementById("infoSistemas").style.display = "none";
+            document.getElementById("infoMecatronica").style.display = "none";
+            document.getElementById("infoArquitectura").style.display = "none";
+        }
+        function goBackToCanvas() {
+    var img = document.getElementById("galleryImage");
+    img.style.display = "none";
+    var canvas = document.getElementById("micanvas");
+    canvas.style.display = "block";
+    document.getElementById("infoIngCivil").style.display = "none";
+    document.getElementById("infoAdmin").style.display = "none";
+    document.getElementById("infoIndustrial").style.display = "none";
+    document.getElementById("infoGestion").style.display = "none";
+    document.getElementById("infoSistemas").style.display = "none";
+    document.getElementById("infoMecatronica").style.display = "none";
+    document.getElementById("infoArquitectura").style.display = "none";
+}
+function showInfoTec() {
+            var canvas = document.getElementById("micanvas");
+            canvas.style.display = "none";
+            var infoTec = document.getElementById("infoTec");
+            infoTec.style.display = "block";
+        }
+
+        function showInfoIngCivil() {
+        var img = document.getElementById("galleryImage");
+        img.style.display = "none";
+        var canvas = document.getElementById("micanvas");
+        canvas.style.display = "none";
+        document.getElementById("infoIngCivil").style.display = "block";
+        document.getElementById("infoAdmin").style.display = "none";
+        document.getElementById("infoIndustrial").style.display = "none";
+        document.getElementById("infoGestion").style.display = "none";
+        document.getElementById("infoSistemas").style.display = "none";
+        document.getElementById("infoMecatronica").style.display = "none";
+        document.getElementById("showInfoArquitectura").style.display = "none";
+    }
+
+    function showInfoAdmin() {
+        var img = document.getElementById("galleryImage");
+        img.style.display = "none";
+        var canvas = document.getElementById("micanvas");
+        canvas.style.display = "none";
+        document.getElementById("infoIngCivil").style.display = "none";
+        document.getElementById("infoAdmin").style.display = "block";
+        document.getElementById("infoIndustrial").style.display = "none";
+        document.getElementById("infoGestion").style.display = "none";
+        document.getElementById("infoSistemas").style.display = "none";
+        document.getElementById("infoMecatronica").style.display = "none";
+        document.getElementById("showInfoArquitectura").style.display = "none";
+    }
+
+    function showInfoIndustrial() {
+        var img = document.getElementById("galleryImage");
+        img.style.display = "none";
+        var canvas = document.getElementById("micanvas");
+        canvas.style.display = "none";
+        document.getElementById("infoIngCivil").style.display = "none";
+        document.getElementById("infoAdmin").style.display = "none";
+        document.getElementById("infoIndustrial").style.display = "block";
+        document.getElementById("infoGestion").style.display = "none";
+        document.getElementById("infoSistemas").style.display = "none";
+        document.getElementById("infoMecatronica").style.display = "none";
+        document.getElementById("showInfoArquitectura").style.display = "none";
+    }
+
+    function showInfoGestion() {
+        var img = document.getElementById("galleryImage");
+        img.style.display = "none";
+        var canvas = document.getElementById("micanvas");
+        canvas.style.display = "none";
+        document.getElementById("infoIngCivil").style.display = "none";
+        document.getElementById("infoAdmin").style.display = "none";
+        document.getElementById("infoIndustrial").style.display = "none";
+        document.getElementById("infoGestion").style.display = "block";
+        document.getElementById("infoSistemas").style.display = "none";
+        document.getElementById("infoMecatronica").style.display = "none";
+        document.getElementById("showInfoArquitectura").style.display = "none";
+    }
+
+    function showInfoSistemas() {
+        var img = document.getElementById("galleryImage");
+        img.style.display = "none";
+        var canvas = document.getElementById("micanvas");
+        canvas.style.display = "none";
+        document.getElementById("infoIngCivil").style.display = "none";
+        document.getElementById("infoAdmin").style.display = "none";
+        document.getElementById("infoIndustrial").style.display = "none";
+        document.getElementById("infoGestion").style.display = "none";
+        document.getElementById("infoSistemas").style.display = "block";
+        document.getElementById("infoMecatronica").style.display = "none";
+        document.getElementById("showInfoArquitectura").style.display = "none";
+    }
+
+    function showInfoMecatronica() {
+        var img = document.getElementById("galleryImage");
+        img.style.display = "none";
+        var canvas = document.getElementById("micanvas");
+        canvas.style.display = "none";
+        document.getElementById("infoIngCivil").style.display = "none";
+        document.getElementById("infoAdmin").style.display = "none";
+        document.getElementById("infoIndustrial").style.display = "none";
+        document.getElementById("infoGestion").style.display = "none";
+        document.getElementById("infoSistemas").style.display = "none";
+        document.getElementById("infoMecatronica").style.display = "block";
+        document.getElementById("showInfoArquitectura").style.display = "block";
+    }
+    function showInfoArquitectura() {
+    var img = document.getElementById("galleryImage");
+    img.style.display = "none";
+    var canvas = document.getElementById("micanvas");
+    canvas.style.display = "none";
+    document.getElementById("infoIngCivil").style.display = "none";
+    document.getElementById("infoAdmin").style.display = "none";
+    document.getElementById("infoIndustrial").style.display = "none";
+    document.getElementById("infoGestion").style.display = "none";
+    document.getElementById("infoSistemas").style.display = "none";
+    document.getElementById("infoMecatronica").style.display = "none";
+    document.getElementById("infoArquitectura").style.display = "block";
+}
+
+
+    function setup() {
+        // Código de inicialización
+    }
+
+    function goBackToCanvas() {
+        var img = document.getElementById("galleryImage");
+        img.style.display = "none";
+        var canvas = document.getElementById("micanvas");
+        canvas.style.display = "block";
+        document.getElementById("galleryImage").style.display = "none";
+        document.getElementById("infoTec").style.display = "none";
+        document.getElementById("infoIngCivil").style.display = "none";
+        document.getElementById("infoAdmin").style.display = "none";
+        document.getElementById("infoIndustrial").style.display = "none";
+        document.getElementById("infoGestion").style.display = "none";
+        document.getElementById("infoSistemas").style.display = "none";
+        document.getElementById("infoMecatronica").style.display = "none";
+        document.getElementById("showInfoArquitectura").style.display = "none";
+
+    }
+</script>
+</body>
+</html>

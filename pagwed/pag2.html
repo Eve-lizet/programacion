@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Estructura básica</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript"></script>
+</head>    
+<body onload="setup();">
+    <div id="contenedor">
+        <header>
+            <div id="banner">  
+                <img src="Tec.png" width="12%">
+                <h1>PROGRAMACIÓN WEB</h1>
+                <img src="yakuin10.png" width="200px"> 
+            </div>
+        </header>
+       
+        <nav>
+            <ul class="menu">
+                <li><a href="#">INTEGRANTES</a>
+                    <ul class="submenu">
+                        <p> Nombre: Evelin Lizeth Hernandez Vasquez CURP: HEVE020113MOCRS Fecha de nacimiento: 13 de Enero de 200 Género: Femenino    Estado civil: Soltero(a)Teléfono: 5655299100 Correo electrónico: evelinhernandez0421@gmail.com Nº de servicio médico:</p>
+                        <li><a href="#" onclick="mostrarIntegrante('eve.jpg', 'Evelin Lizeth Hernandez Vasquez ')">Evelin Lizeth Hernandez Vasquez </a></li> 
+                        
+                        <li><a href="#" onclick="mostrarIntegrante('charly.jpg', 'Charly Joshua Sandoval Hernandez')">Charly Joshua Sandoval Hernandez</a></li>
+                        <li><a href="#" onclick="mostrarIntegrante('luz.jpg', 'Luz Maria Mendoza')">Luz Maria Mendoza</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">unidad 1</a>
+                    <ul class="submenu">
+                        <li><a href="#" id="1.1 Evolucion de las Aplicaciones" onclick="mostrarPDF('pdf/1.1 Evolucion de las aplicaciones web.pptx.pdf')">1.1 Evolucion de las Aplicaciones</a></li>  
+                        <li><a href="#" id="1.2 Arquitectura de las Aplicaciones "  onclick="mostrarPDF('pdf/1.2 PRESENTACION ana y yo.pdf')">1.2 Arquitectura de las Aplicaciones </a></li>  
+                        <li><a href="#" id="1.3 Tecnlogias  para el desarrollo de Aplicaciones web"onclick="mostrarPDF('1.3 TECNOLOGIA PARA EL DESARROLLO DE APLICACIONES WEB.pdf')">1.3 Tecnlogias  para el desarrollo de Aplicaciones web</a></li>  
+                        <li><a href="#" id="1.4 Planificacion de Aplicaciones"onclick="mostrarPDF('pdf/1.4 planificacion de aplicaciones web.pdf')">1.4 Planificacion de Aplicaciones</a></li>  
+                    </ul>
+                </li>
+                <li><a href="#">unidad 2</a>
+                    <ul class="submenu">
+                        <li><a href="#" id="2.1 Introduccion">2.1 Introducción</a></li>  
+                        <li><a href="#" id="2.2 Estructura global ">2.2 Estructura global</a></li>  
+                        <li><a href="#" id="2.3 Elementos basico:texto,vinculo,listas,tablas,objectos,imagenes y Aplicaciones">
+                            2.3 Elementos básicos: texto, vínculo, listas, tablas, objetos, imágenes y Aplicaciones
+                        </a></li>  
+                        <li><a href="#" id="2.4 Formularios">2.4 Formularios</a></li>
+                        <li><a href="#" id="2.5 Lenguaje de presentacion en documento Web">2.5 Lenguaje de presentación en documento Web</a></li>  
+                        <li><a href="#" id="2.6 Selectores">2.6 Selectores</a></li>
+                        <li><a href="#" id="2.7 Modelo  de caja">2.7 Modelo de caja</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">unidad 3</a>
+                    <ul class="submenu">
+                        <li><a href="#" id="3.1 Introduccion el lenguje">3.1 Introducción el lenguaje</a></li>  
+                        <li><a href="#" id="3.2 Manejo de Frameworks ">3.2 Manejo de Frameworks  </a></li>  
+                        <li><a href="#" id="3.3 Estructuras de Control ">3.3 Estructuras de Control </a></li>  
+                        <li><a href="#" id="3.4 Manipulación de objetos. ">3.4 Manipulación de objetos. </a></li>
+                    </ul>
+                </li>
+                <li><a href="#">unidad 4</a>
+                    <ul class="submenu">
+                        <li><a href="#" id="4.1 Introducción al lenguaje. ">4.1 Introducción al lenguaje. </a></li>  
+                        <li><a href="#" id="4.2 Estructuras de Control. ">4.2 Estructuras de Control.  </a></li>  
+                        <li><a href="#" id="4.3 Tratamiento de Formularios.">4.3 Tratamiento de Formularios.  </a></li>  
+                        <li><a href="#" id="4.4 Manejo de objetos del servidor">4.4 Manejo de objetos del servidor</a></li>
+                        <li><a href="#" id="4.5 Creación de clases.">4.5 Creación de clases.</a></li>
+                        <li><a href="#" id="4.6 Acceso a datos.">4.6 Acceso a datos.</a></li>
+                    </ul>
+                </li> 
+                <li><a href="#">unidad 5</a>
+                    <ul class="submenu">
+                        <li><a href="#" id="5.1 Conceptos generales. ">5.1 Conceptos generales. </a></li>  
+                        <li><a href="#" id="5.2 Tipos de Servicios en la nube.  ">5.2 Tipos de Servicios en la nube.</a></li>  
+                        <li><a href="#" id="5.3 Patrones de diseño">5.3 Patrones de diseño</a></li>  
+                        <li><a href="#" id="5.4 Estándares en servicios">5.4 Estándares en servicios</a></li>
+                        <li><a href="#" id="5.5 Plataformas tecnológicas">5.5 Plataformas tecnológicas</a></li>
+                        <li><a href="#" id="5.6 Seguridad e interoperabilidad.">5.6 Seguridad e interoperabilidad.</a></li>
+                    </ul>
+                </li>
+                <!-- Aquí continúa con el resto de unidades -->
+            </ul>
+        </nav>
+        <section id="contenido">
+            <div id="pdf-viewer" style="display:none;">
+                <iframe id="pdf-frame" width="100%" height="600px"></iframe>
+            </div>
+            <div id="integrante-viewer" style="text-align: center;">
+                <img id="integrante-image" src="" alt="Imagen del integrante" style="display:none; max-width: 100%; height: auto; margin: 20px auto;">
+                <p id="integrante-texto" style="display:none; font-size: 18px; margin-top: 10px;"></p>
+            </div>
+        </section>
+        <aside>
+            <!-- Contenido del aside aquí -->
+        </aside>
+        <footer>
+            <h2><a href="https://www.youtube.com/watch?v=gzWB9-8_4Ro" target="_blank">Juventud, divino tesoro,
+                ¡ya te vas para no volver!
+                Cuando quiero llorar, no lloro
+                y a veces lloro sin querer
+                    (RUBEN DARIO)
+                </a></h2>
+        </footer>
+    </div>
+    <script>
+        function mostrarPDF(url) {
+            var pdfViewer = document.getElementById("pdf-viewer");
+            var pdfFrame = document.getElementById("pdf-frame");
+            pdfFrame.src = url;
+            pdfViewer.style.display = "block";
+        }
+
+        function mostrarIntegrante(imageUrl, texto) {
+            var integranteViewer = document.getElementById("integrante-viewer");
+            var integranteImage = document.getElementById("integrante-image");
+            var integranteTexto = document.getElementById("integrante-texto");
+            integranteImage.src = imageUrl;
+            integranteImage.style.display = "block";
+            integranteTexto.textContent = texto;
+            integranteTexto.style.display = "block";
+        }
+    </script>
+</body>
+</html>
